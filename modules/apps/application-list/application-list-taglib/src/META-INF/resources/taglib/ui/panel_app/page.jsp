@@ -26,17 +26,15 @@ PortletURL portletURL = PortletURLFactoryUtil.create(request, panelApp.getPortle
 portletURL.setWindowState(WindowState.MAXIMIZED);
 %>
 
-<c:if test="<%= portletURL != null %>">
-	<li
-		aria-selected="<%= ppid.equals(panelApp.getPortletId()) ? "true" : StringPool.BLANK %>"
-		class="<%= panelApp.getPortletId().equals(ppid) ? "selected-portlet" : StringPool.BLANK %>"
-		role="presentation"
-	>
-		<aui:a
-			ariaRole="menuitem"
-			href="<%= portletURL.toString() %>"
-			id='<%= "portlet_" + panelApp.getPortletId() %>'
-			label="<%= PortalUtil.getPortletTitle(portlet, application, locale) %>"
-		/>
-	</li>
-</c:if>
+<li
+	aria-selected="<%= ppid.equals(panelApp.getPortletId()) ? "true" : StringPool.BLANK %>"
+	class="<%= panelApp.getPortletId().equals(ppid) ? "selected-portlet" : StringPool.BLANK %>"
+	role="presentation"
+>
+	<aui:a
+		ariaRole="menuitem"
+		href="<%= portletURL.toString() %>"
+		id='<%= "portlet_" + panelApp.getPortletId() %>'
+		label="<%= PortalUtil.getPortletTitle(portlet, application, locale) %>"
+	/>
+</li>
