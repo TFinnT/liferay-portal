@@ -28,7 +28,7 @@ portletURL.setWindowState(WindowState.MAXIMIZED);
 
 <li
 	aria-selected="<%= ppid.equals(panelApp.getPortletId()) ? "true" : StringPool.BLANK %>"
-	class="<%= panelApp.getPortletId().equals(ppid) ? "selected-portlet" : StringPool.BLANK %>"
+	class="<%= ppid.equals(panelApp.getPortletId()) ? "selected-portlet" : StringPool.BLANK %>"
 	role="presentation"
 >
 	<aui:a
