@@ -24,8 +24,6 @@ String ppid = themeDisplay.getPpid();
 PortletURL portletURL = PortletURLFactoryUtil.create(request, panelApp.getPortletId(), themeDisplay.getPlid(), PortletRequest.RENDER_PHASE);
 
 portletURL.setWindowState(WindowState.MAXIMIZED);
-
-Portlet portlet = PortletLocalServiceUtil.getPortletById(themeDisplay.getCompanyId(), panelApp.getPortletId());
 %>
 
 <c:if test="<%= portletURL != null %>">
