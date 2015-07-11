@@ -12,36 +12,26 @@
  * details.
  */
 
-package com.liferay.calendar.web.customattributes;
+package com.liferay.wiki.web.custom.attributes;
 
-import com.liferay.calendar.constants.CalendarPortletKeys;
-import com.liferay.calendar.model.CalendarBooking;
 import com.liferay.portal.theme.ThemeDisplay;
 import com.liferay.portlet.expando.model.BaseCustomAttributesDisplay;
-import com.liferay.portlet.expando.model.CustomAttributesDisplay;
-
-import org.osgi.service.component.annotations.Component;
+import com.liferay.wiki.model.WikiPage;
 
 /**
- * @author Fabio Pezzutto
- * @author Eduardo Lundgren
+ * @author Jorge Ferrer
  */
-@Component(
-	immediate = true,
-	property = {"javax.portlet.name=" + CalendarPortletKeys.CALENDAR},
-	service = CustomAttributesDisplay.class
-)
-public class CalendarCustomAttributesDisplay
+public class WikiPageCustomAttributesDisplay
 	extends BaseCustomAttributesDisplay {
 
 	@Override
 	public String getClassName() {
-		return CalendarBooking.class.getName();
+		return WikiPage.class.getName();
 	}
 
 	@Override
 	public String getIconPath(ThemeDisplay themeDisplay) {
-		return themeDisplay.getPathThemeImages() + "/common/date.png";
+		return themeDisplay.getPathThemeImages() + "/common/pages.png";
 	}
 
 }

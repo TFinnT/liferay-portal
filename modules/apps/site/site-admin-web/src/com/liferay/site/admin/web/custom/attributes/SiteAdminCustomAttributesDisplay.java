@@ -12,7 +12,7 @@
  * details.
  */
 
-package com.liferay.site.admin.web.customattributes;
+package com.liferay.site.admin.web.custom.attributes;
 
 import com.liferay.portal.model.Group;
 import com.liferay.portal.theme.ThemeDisplay;

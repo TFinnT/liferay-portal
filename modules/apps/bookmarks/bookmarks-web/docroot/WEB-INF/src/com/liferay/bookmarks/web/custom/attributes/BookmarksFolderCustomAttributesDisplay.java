@@ -12,30 +12,21 @@
  * details.
  */
 
-package com.liferay.journal.web.customattributes;
+package com.liferay.bookmarks.web.custom.attributes;
 
-import com.liferay.journal.model.JournalFolder;
-import com.liferay.journal.web.constants.JournalPortletKeys;
+import com.liferay.bookmarks.model.BookmarksFolder;
 import com.liferay.portal.theme.ThemeDisplay;
 import com.liferay.portlet.expando.model.BaseCustomAttributesDisplay;
-import com.liferay.portlet.expando.model.CustomAttributesDisplay;
-
-import org.osgi.service.component.annotations.Component;
 
 /**
- * @author Eudaldo Alonso
+ * @author Jorge Ferrer
  */
-@Component(
-	immediate = true,
-	property = {"javax.portlet.name=" + JournalPortletKeys.JOURNAL},
-	service = CustomAttributesDisplay.class
-)
-public class JournalFolderCustomAttributesDisplay
+public class BookmarksFolderCustomAttributesDisplay
 	extends BaseCustomAttributesDisplay {
 
 	@Override
 	public String getClassName() {
-		return JournalFolder.class.getName();
+		return BookmarksFolder.class.getName();
 	}
 
 	@Override

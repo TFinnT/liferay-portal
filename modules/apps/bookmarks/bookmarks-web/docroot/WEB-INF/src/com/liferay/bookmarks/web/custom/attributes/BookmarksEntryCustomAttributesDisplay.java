@@ -12,7 +12,7 @@
  * details.
  */
 
-package com.liferay.bookmarks.web.customattributes;
+package com.liferay.bookmarks.web.custom.attributes;
 
 import com.liferay.bookmarks.model.BookmarksEntry;
 import com.liferay.portal.theme.ThemeDisplay;

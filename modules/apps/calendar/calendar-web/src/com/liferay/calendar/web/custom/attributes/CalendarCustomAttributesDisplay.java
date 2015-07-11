@@ -12,35 +12,36 @@
  * details.
  */
 
-package com.liferay.blogs.web.customattributes;
+package com.liferay.calendar.web.custom.attributes;
 
-import com.liferay.blogs.web.constants.BlogsPortletKeys;
+import com.liferay.calendar.constants.CalendarPortletKeys;
+import com.liferay.calendar.model.CalendarBooking;
 import com.liferay.portal.theme.ThemeDisplay;
-import com.liferay.portlet.blogs.model.BlogsEntry;
 import com.liferay.portlet.expando.model.BaseCustomAttributesDisplay;
 import com.liferay.portlet.expando.model.CustomAttributesDisplay;
 
 import org.osgi.service.component.annotations.Component;
 
 /**
- * @author Jorge Ferrer
+ * @author Fabio Pezzutto
+ * @author Eduardo Lundgren
  */
 @Component(
 	immediate = true,
-	property = {"javax.portlet.name=" + BlogsPortletKeys.BLOGS},
+	property = {"javax.portlet.name=" + CalendarPortletKeys.CALENDAR},
 	service = CustomAttributesDisplay.class
 )
-public class BlogsEntryCustomAttributesDisplay
+public class CalendarCustomAttributesDisplay
 	extends BaseCustomAttributesDisplay {
 
 	@Override
 	public String getClassName() {
-		return BlogsEntry.class.getName();
+		return CalendarBooking.class.getName();
 	}
 
 	@Override
 	public String getIconPath(ThemeDisplay themeDisplay) {
-		return themeDisplay.getPathThemeImages() + "/blogs/blogs.png";
+		return themeDisplay.getPathThemeImages() + "/common/date.png";
 	}
 
 }
