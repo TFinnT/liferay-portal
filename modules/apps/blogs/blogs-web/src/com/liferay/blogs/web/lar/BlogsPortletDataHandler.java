@@ -12,7 +12,7 @@
  * details.
  */
 
-package com.liferay.blogs.web.blogs.lar;
+package com.liferay.blogs.web.lar;
 
 import com.liferay.blogs.web.constants.BlogsPortletKeys;
 import com.liferay.portal.kernel.dao.orm.ActionableDynamicQuery;
