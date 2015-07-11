@@ -12,7 +12,7 @@
  * details.
  */
 
-package com.liferay.blogs.web.blogs.portlet.path;
+package com.liferay.blogs.web.portlet.path;
 
 import com.liferay.portal.kernel.struts.path.AuthPublicPath;
 import com.liferay.portal.kernel.struts.path.BaseAuthPublicPath;
@@ -28,10 +28,10 @@ import org.osgi.service.component.annotations.Modified;
  */
 @Component(
 	immediate = true,
-	property = BaseAuthPublicPath.AUTH_PUBLIC_PATH + "=/blogs/find_entry",
+	property = BaseAuthPublicPath.AUTH_PUBLIC_PATH + "=/blogs/trackback",
 	service = AuthPublicPath.class
 )
-public class TrackbackAuthPublicPath extends BaseAuthPublicPath {
+public class FindEntryAuthPublicPath extends BaseAuthPublicPath {
 
 	@Activate
 	protected void activate(Map<String, String> properties) {

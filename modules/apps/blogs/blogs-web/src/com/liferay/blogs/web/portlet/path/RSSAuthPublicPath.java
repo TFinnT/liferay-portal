@@ -12,7 +12,7 @@
  * details.
  */
 
-package com.liferay.blogs.web.blogs.portlet.path;
+package com.liferay.blogs.web.portlet.path;
 
 import com.liferay.portal.kernel.struts.path.AuthPublicPath;
 import com.liferay.portal.kernel.struts.path.BaseAuthPublicPath;
