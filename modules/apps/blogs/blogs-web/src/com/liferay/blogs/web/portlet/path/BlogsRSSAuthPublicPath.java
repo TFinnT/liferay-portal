@@ -31,7 +31,7 @@ import org.osgi.service.component.annotations.Modified;
 	property = BaseAuthPublicPath.AUTH_PUBLIC_PATH + "=/blogs/rss",
 	service = AuthPublicPath.class
 )
-public class RSSAuthPublicPath extends BaseAuthPublicPath {
+public class BlogsRSSAuthPublicPath extends BaseAuthPublicPath {
 
 	@Activate
 	protected void activate(Map<String, String> properties) {

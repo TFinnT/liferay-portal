@@ -12,7 +12,7 @@
  * details.
  */
 
-package com.liferay.blogs.web.blogsaggregator.portlet.path;
+package com.liferay.blogs.web.portlet.path;
 
 import com.liferay.portal.kernel.struts.path.AuthPublicPath;
 import com.liferay.portal.kernel.struts.path.BaseAuthPublicPath;
@@ -31,7 +31,7 @@ import org.osgi.service.component.annotations.Modified;
 	property = BaseAuthPublicPath.AUTH_PUBLIC_PATH + "=/blogs_aggregator/rss",
 	service = AuthPublicPath.class
 )
-public class RSSAuthPublicPath extends BaseAuthPublicPath {
+public class BlogsAggregatorRSSAuthPublicPath extends BaseAuthPublicPath {
 
 	@Activate
 	protected void activate(Map<String, String> properties) {
