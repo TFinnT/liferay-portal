@@ -31,6 +31,7 @@ import com.liferay.portlet.blogs.service.BlogsEntryServiceUtil;
 import java.util.Date;
 
 import javax.portlet.PortletConfig;
+
 import javax.servlet.http.HttpServletRequest;
 
 import org.osgi.service.component.annotations.Component;
