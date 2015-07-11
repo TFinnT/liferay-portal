@@ -12,12 +12,11 @@
  * details.
  */
 
-package com.liferay.blogs.web.blogsadmin.portlet;
+package com.liferay.blogs.web.portlet;
 
 import com.liferay.blogs.web.constants.BlogsPortletKeys;
 import com.liferay.portal.kernel.portlet.BasePortletProvider;
 import com.liferay.portal.kernel.portlet.EditPortletProvider;
-import com.liferay.portal.kernel.portlet.ManagePortletProvider;
 import com.liferay.portal.kernel.portlet.ViewPortletProvider;
 
 import org.osgi.service.component.annotations.Component;
@@ -28,18 +27,15 @@ import org.osgi.service.component.annotations.Component;
 @Component(
 	immediate = true,
 	property = {"model.class.name=com.liferay.portlet.blogs.model.BlogsEntry"},
-	service = {
-		EditPortletProvider.class, ManagePortletProvider.class,
-		ViewPortletProvider.class
-	}
+	service = {EditPortletProvider.class, ViewPortletProvider.class}
 )
-public class BlogsAdminAdminPortletProvider
+public class BlogsEditViewPortletProvider
 	extends BasePortletProvider
-	implements EditPortletProvider, ManagePortletProvider, ViewPortletProvider {
+	implements EditPortletProvider, ViewPortletProvider {
 
 	@Override
 	public String getPortletId() {
-		return BlogsPortletKeys.BLOGS_ADMIN;
+		return BlogsPortletKeys.BLOGS;
 	}
 
 }
