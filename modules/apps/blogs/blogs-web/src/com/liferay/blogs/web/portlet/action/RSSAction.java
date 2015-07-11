@@ -14,7 +14,7 @@
 
 package com.liferay.blogs.web.portlet.action;
 
-import com.liferay.blogs.web.blogs.settings.internal.BlogsPortletInstanceSettings;
+import com.liferay.blogs.web.settings.internal.BlogsPortletInstanceSettings;
 import com.liferay.portal.kernel.dao.search.SearchContainer;
 import com.liferay.portal.kernel.struts.StrutsAction;
 import com.liferay.portal.kernel.util.JavaConstants;
@@ -31,7 +31,6 @@ import com.liferay.portlet.blogs.service.BlogsEntryServiceUtil;
 import java.util.Date;
 
 import javax.portlet.PortletConfig;
-
 import javax.servlet.http.HttpServletRequest;
 
 import org.osgi.service.component.annotations.Component;

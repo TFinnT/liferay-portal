@@ -14,8 +14,8 @@
 
 package com.liferay.blogs.web.portlet.action;
 
-import com.liferay.blogs.web.blogs.image.selector.EditorImageSelectorUploadHandler;
 import com.liferay.blogs.web.constants.BlogsPortletKeys;
+import com.liferay.blogs.web.image.selector.EditorImageSelectorUploadHandler;
 import com.liferay.portal.kernel.image.selector.ImageSelectorUploadHandler;
 import com.liferay.portal.kernel.portlet.bridges.mvc.BaseMVCActionCommand;
 import com.liferay.portal.kernel.portlet.bridges.mvc.MVCActionCommand;
