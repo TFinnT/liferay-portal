@@ -12,7 +12,7 @@
  * details.
  */
 
-package com.liferay.blogs.web.blogsaggregator.portlet.action;
+package com.liferay.blogs.web.portlet.action;
 
 import com.liferay.blogs.web.constants.BlogsPortletKeys;
 import com.liferay.portal.kernel.portlet.ConfigurationAction;

@@ -12,16 +12,10 @@
  * details.
  */
 
-package com.liferay.blogs.web.blogs.portlet.action;
+package com.liferay.blogs.web.portlet.action;
 
-import com.liferay.blogs.web.blogs.image.selector.SmallImageSelectorUploadHandler;
 import com.liferay.blogs.web.constants.BlogsPortletKeys;
-import com.liferay.portal.kernel.image.selector.ImageSelectorUploadHandler;
-import com.liferay.portal.kernel.portlet.bridges.mvc.BaseMVCActionCommand;
-import com.liferay.portal.kernel.portlet.bridges.mvc.MVCActionCommand;
-
-import javax.portlet.ActionRequest;
-import javax.portlet.ActionResponse;
+import com.liferay.portal.kernel.portlet.bridges.mvc.MVCRenderCommand;
 
 import org.osgi.service.component.annotations.Component;
 
@@ -33,22 +27,16 @@ import org.osgi.service.component.annotations.Component;
 	property = {
 		"javax.portlet.name=" + BlogsPortletKeys.BLOGS,
 		"javax.portlet.name=" + BlogsPortletKeys.BLOGS_ADMIN,
-		"mvc.command.name=/blogs/small_image_selector"
+		"javax.portlet.name=" + BlogsPortletKeys.BLOGS_AGGREGATOR,
+		"mvc.command.name=/blogs/edit_entry"
 	},
-	service = MVCActionCommand.class
+	service = MVCRenderCommand.class
 )
-public class SmallImageSelectorMVCActionCommand extends BaseMVCActionCommand {
+public class EditEntryMVCRenderCommand extends GetEntryMVCRenderCommand {
 
 	@Override
-	protected void doProcessAction(
-			ActionRequest actionRequest, ActionResponse actionResponse)
-		throws Exception {
-
-		_imageSelectorUploadHandler.uploadSelectedImage(
-			actionRequest, actionResponse);
+	protected String getPath() {
+		return "/blogs/edit_entry.jsp";
 	}
-
-	private final ImageSelectorUploadHandler _imageSelectorUploadHandler =
-		new SmallImageSelectorUploadHandler();
 
 }

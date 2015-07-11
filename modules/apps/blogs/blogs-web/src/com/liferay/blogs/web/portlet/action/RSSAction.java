@@ -12,7 +12,7 @@
  * details.
  */
 
-package com.liferay.blogs.web.blogs.portlet.action;
+package com.liferay.blogs.web.portlet.action;
 
 import com.liferay.blogs.web.blogs.settings.internal.BlogsPortletInstanceSettings;
 import com.liferay.portal.kernel.dao.search.SearchContainer;

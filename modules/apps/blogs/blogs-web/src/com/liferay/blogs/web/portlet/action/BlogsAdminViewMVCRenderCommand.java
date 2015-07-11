@@ -12,10 +12,13 @@
  * details.
  */
 
-package com.liferay.blogs.web.blogs.portlet.action;
+package com.liferay.blogs.web.portlet.action;
 
 import com.liferay.blogs.web.constants.BlogsPortletKeys;
 import com.liferay.portal.kernel.portlet.bridges.mvc.MVCRenderCommand;
+
+import javax.portlet.RenderRequest;
+import javax.portlet.RenderResponse;
 
 import org.osgi.service.component.annotations.Component;
 
@@ -25,18 +28,18 @@ import org.osgi.service.component.annotations.Component;
 @Component(
 	immediate = true,
 	property = {
-		"javax.portlet.name=" + BlogsPortletKeys.BLOGS,
 		"javax.portlet.name=" + BlogsPortletKeys.BLOGS_ADMIN,
-		"javax.portlet.name=" + BlogsPortletKeys.BLOGS_AGGREGATOR,
-		"mvc.command.name=/blogs/view_entry"
+		"mvc.command.name=/", "mvc.command.name=/blogs_admin/view"
 	},
 	service = MVCRenderCommand.class
 )
-public class ViewEntryMVCRenderCommand extends GetEntryMVCRenderCommand {
+public class BlogsAdminViewMVCRenderCommand implements MVCRenderCommand {
 
 	@Override
-	protected String getPath() {
-		return "/blogs/view_entry.jsp";
+	public String render(
+		RenderRequest renderRequest, RenderResponse renderResponse) {
+
+		return "/blogs_admin/view.jsp";
 	}
 
 }

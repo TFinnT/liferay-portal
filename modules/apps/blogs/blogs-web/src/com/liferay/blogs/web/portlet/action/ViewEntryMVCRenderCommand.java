@@ -12,7 +12,7 @@
  * details.
  */
 
-package com.liferay.blogs.web.blogs.portlet.action;
+package com.liferay.blogs.web.portlet.action;
 
 import com.liferay.blogs.web.constants.BlogsPortletKeys;
 import com.liferay.portal.kernel.portlet.bridges.mvc.MVCRenderCommand;
@@ -28,15 +28,15 @@ import org.osgi.service.component.annotations.Component;
 		"javax.portlet.name=" + BlogsPortletKeys.BLOGS,
 		"javax.portlet.name=" + BlogsPortletKeys.BLOGS_ADMIN,
 		"javax.portlet.name=" + BlogsPortletKeys.BLOGS_AGGREGATOR,
-		"mvc.command.name=/blogs/edit_entry"
+		"mvc.command.name=/blogs/view_entry"
 	},
 	service = MVCRenderCommand.class
 )
-public class EditEntryMVCRenderCommand extends GetEntryMVCRenderCommand {
+public class ViewEntryMVCRenderCommand extends GetEntryMVCRenderCommand {
 
 	@Override
 	protected String getPath() {
-		return "/blogs/edit_entry.jsp";
+		return "/blogs/view_entry.jsp";
 	}
 
 }
