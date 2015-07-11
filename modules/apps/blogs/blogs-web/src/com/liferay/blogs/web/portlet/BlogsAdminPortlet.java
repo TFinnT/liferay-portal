@@ -14,8 +14,8 @@
 
 package com.liferay.blogs.web.portlet;
 
-import com.liferay.blogs.web.blogsadmin.upgrade.BlogsAdminWebUpgrade;
 import com.liferay.blogs.web.constants.BlogsPortletKeys;
+import com.liferay.blogs.web.upgrade.BlogsWebUpgrade;
 import com.liferay.portal.kernel.portlet.bridges.mvc.MVCPortlet;
 
 import javax.portlet.Portlet;
@@ -55,8 +55,7 @@ import org.osgi.service.component.annotations.Reference;
 public class BlogsAdminPortlet extends MVCPortlet {
 
 	@Reference(unbind = "-")
-	protected void setBlogsAdminWebUpgrade(
-		BlogsAdminWebUpgrade blogsAdminWebUpgrade) {
+	protected void setBlogsWebUpgrade(BlogsWebUpgrade blogsWebUpgrade) {
 	}
 
 }

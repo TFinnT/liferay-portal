@@ -14,8 +14,8 @@
 
 package com.liferay.blogs.web.portlet;
 
-import com.liferay.blogs.web.blogs.upgrade.BlogsWebUpgrade;
 import com.liferay.blogs.web.constants.BlogsPortletKeys;
+import com.liferay.blogs.web.upgrade.BlogsWebUpgrade;
 import com.liferay.portal.kernel.portlet.bridges.mvc.MVCPortlet;
 
 import javax.portlet.Portlet;

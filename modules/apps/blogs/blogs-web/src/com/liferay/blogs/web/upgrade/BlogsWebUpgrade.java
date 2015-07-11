@@ -12,7 +12,7 @@
  * details.
  */
 
-package com.liferay.blogs.web.blogs.upgrade;
+package com.liferay.blogs.web.upgrade;
 
 import com.liferay.blogs.web.constants.BlogsPortletKeys;
 import com.liferay.portal.kernel.exception.PortalException;
@@ -52,7 +52,9 @@ public class BlogsWebUpgrade {
 			@Override
 			protected String[][] getRenamePortletIdsArray() {
 				return new String[][] {
-					new String[] {"33", BlogsPortletKeys.BLOGS}
+					new String[] {"33", BlogsPortletKeys.BLOGS},
+					new String[] {"115", BlogsPortletKeys.BLOGS_AGGREGATOR},
+					new String[] {"161", BlogsPortletKeys.BLOGS_ADMIN}
 				};
 			}
 
