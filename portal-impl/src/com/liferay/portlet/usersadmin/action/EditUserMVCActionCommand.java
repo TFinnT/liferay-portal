@@ -388,7 +388,7 @@ public class EditUserMVCActionCommand extends BaseMVCActionCommand {
 				redirect = HttpUtil.setParameter(redirect, "refererPlid", 0);
 			}
 
-			sendRedirect(actionRequest, actionResponse, redirect);
+			actionRequest.setAttribute(WebKeys.REDIRECT, redirect);
 		}
 		catch (Exception e) {
 			if (e instanceof NoSuchUserException ||

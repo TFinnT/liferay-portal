@@ -23,6 +23,7 @@ import com.liferay.portal.kernel.util.Constants;
 import com.liferay.portal.kernel.util.ParamUtil;
 import com.liferay.portal.kernel.util.StringUtil;
 import com.liferay.portal.kernel.util.Validator;
+import com.liferay.portal.kernel.util.WebKeys;
 import com.liferay.portal.model.Organization;
 import com.liferay.portal.security.auth.PrincipalException;
 import com.liferay.portal.security.membershippolicy.MembershipPolicyException;
@@ -66,7 +67,7 @@ public class EditOrganizationAssignmentsMVCActionCommand
 				String redirect = ParamUtil.getString(
 					actionRequest, "assignmentsRedirect");
 
-				sendRedirect(actionRequest, actionResponse, redirect);
+				actionRequest.setAttribute(WebKeys.REDIRECT, redirect);
 			}
 		}
 		catch (Exception e) {

@@ -118,7 +118,7 @@ public class EditOrganizationMVCActionCommand extends BaseMVCActionCommand {
 					organization.getOrganizationId());
 			}
 
-			sendRedirect(actionRequest, actionResponse, redirect);
+			actionRequest.setAttribute(WebKeys.REDIRECT, redirect);
 		}
 		catch (Exception e) {
 			if (e instanceof NoSuchOrganizationException ||
